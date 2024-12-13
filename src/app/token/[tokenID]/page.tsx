@@ -1,0 +1,24 @@
+
+import { Form } from "./component/Form"
+import TokenChart from "./component/TokenChart"
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ tokenID: string }>
+}) {
+  const slug = (await params).tokenID
+  
+  return (
+    <div className="relative mx-auto px-7 flex h-full max-w-screen-2xl flex-col gap-4 rounded-lg py-4 lg:flex-row">
+      <div className="w-full lg:order-1">
+        <TokenChart tokenID={slug}/>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aperiam? Officia, accusamus? Sapiente, eaque? Cum voluptas reiciendis laboriosam numquam laborum nulla dicta incidunt voluptatum doloribus recusandae distinctio molestiae placeat mollitia consectetur, veritatis cupiditate voluptates animi exercitationem corporis optio dignissimos blanditiis vitae voluptatem soluta? Labore deleniti ipsa nobis iste quasi accusantium ad optio aliquam asperiores. Nisi quas quos libero, officia architecto nesciunt beatae soluta reprehenderit alias quasi similique asperiores unde pariatur iste. Voluptatum unde, perferendis quidem amet quod possimus asperiores corporis! Quibusdam esse a, itaque modi nesciunt consequatur, est ad eveniet nam voluptatem suscipit numquam ullam iusto error deserunt necessitatibus exercitationem, illum eligendi eos qui libero facilis corporis sapiente soluta? Odio nulla exercitationem corrupti, consectetur beatae optio quas porro ex id voluptate laboriosam magnam asperiores maiores sapiente voluptatibus eum officiis assumenda modi laborum nam aperiam quam. Amet enim iure voluptas obcaecati corporis repudiandae nihil ullam, nostrum harum odio labore ducimus est tempore dicta expedita sunt facilis accusamus officia eum, illum blanditiis rem? Nobis ea possimus expedita cumque beatae ullam asperiores eligendi aliquid quod quisquam dignissimos placeat cum laboriosam et, quo voluptas voluptatibus reprehenderit repellendus commodi consequatur odit. Aliquam magnam corporis in sapiente aspernatur sed officiis fuga laudantium beatae molestias, saepe repellendus eligendi maiores facere dolore quis hic natus veritatis doloribus iure fugit asperiores suscipit voluptatem minima. Optio magnam, a nam ut blanditiis ducimus fugit, quos corrupti pariatur ea possimus sunt reprehenderit delectus assumenda perspiciatis omnis dolorem. Quas obcaecati dolores praesentium fugit error totam fugiat, aperiam accusamus earum laudantium quia, aliquid amet, eum perspiciatis a optio suscipit adipisci iste tempora soluta nisi possimus minima maiores. Odio animi quidem error aspernatur commodi qui voluptate recusandae beatae eius aut cumque ipsam quibusdam nemo magni, mollitia consequuntur eos quo incidunt corrupti veniam minus. Non quas id veniam. Veritatis possimus distinctio magnam impedit fugit minus animi id ut autem ad suscipit, sunt perspiciatis culpa aspernatur blanditiis sequi eius tenetur nostrum iusto enim recusandae consequatur. Incidunt soluta quasi nam alias blanditiis voluptatibus facilis fugiat aspernatur sint necessitatibus quidem temporibus impedit officia esse architecto est a officiis, quo delectus quia aliquam quis? Blanditiis, quas odit totam consectetur provident reprehenderit praesentium exercitationem soluta saepe rerum nihil ab, excepturi pariatur libero nesciunt veritatis modi autem est, eum quod quaerat voluptatibus iste id fuga. Totam commodi quas quibusdam illo rerum est at omnis sunt quam aut, nulla cum dolores, eos repudiandae inventore dolorem consectetur nostrum alias? Provident nobis voluptas dolorem porro distinctio, iusto autem doloribus sequi repellat quas libero consequatur laboriosam eaque cum perferendis enim ab, incidunt pariatur expedita! Harum laudantium rerum praesentium obcaecati laborum maiores magnam, neque aperiam repellendus delectus tempore est numquam dolorum! Hic ipsa, culpa quo in dignissimos vitae. Suscipit maxime ipsum voluptatibus reprehenderit architecto id, accusantium in dolore minus vero laboriosam sequi fugiat est molestiae impedit voluptatem eligendi vel quod totam voluptates voluptate odio nemo consequuntur ut? Quisquam doloremque molestias iusto voluptatibus vitae, quas, aspernatur sequi ea fuga perferendis maxime tenetur animi. Assumenda, nesciunt numquam. Voluptates magni sequi a cumque repudiandae similique corporis ullam facilis voluptatum amet.</h6>
+      </div>
+      <div className="px-4 lg:order-3 lg:max-w-sm lg:px-0">
+          <Form />
+          <h3>A Liquidswap pool has been detected, Token might be manipulated upon graduation. Please exercise caution when trading this token and ensure you have a clear understanding of the associated risks and mechanics before proceeding. UPTOS will not be responsible for any losses</h3>
+        </div>
+    </div>
+  )
+}
